@@ -19,6 +19,10 @@ body{
     margin: 0;
 }
 
+html{
+    max-width: 100vw;
+}
+
 /*Start Heading*/
 .form-heading{
     display: flex;
