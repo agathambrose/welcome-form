@@ -69,6 +69,8 @@ h3{
 
 /*Start Form*/
 .form-body{
+    min-width: 90vw;
+    max-height: 100vh;
     margin: 10px ;
     padding: 20px;
 }
@@ -210,13 +212,14 @@ input[type=email]:hover{
     font-size: 1.2rem;
 }
 
-.form-control i{
-    position: relative;
+/*.form-control i{
     visibility: hidden;
     bottom: 30px;
-    left: 38rem;
+    position: relative;
+    left: 100rem;
     size: 10px;
 }
+*/
 
 .form-control.success i.fa-check-circle{
     visibility: visible;
