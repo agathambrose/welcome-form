@@ -24,13 +24,13 @@ html{
 
 /*Start Heading*/
 .form-heading{
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 600;
     min-width: 100px;
     color: white;
@@ -50,15 +50,15 @@ h2{
     display: block;
     justify-content: center;
     color: white;
-    max-width: ;
-    font-size: 2rem;
+    max-width: 100vw;
+    font-size: 1rem;
     font-weight: 500;
     text-transform: capitalize;
 }
 
 h3{
     color: white;
-    font-size: 1rem;
+    font-size: .5rem;
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -69,7 +69,7 @@ h3{
 
 /*Start Form*/
 .form-body{
-    min-width: 90vw;
+    min-width: 100vw;
     max-height: 100vh;
     margin: 10px ;
     padding: 20px;
@@ -80,7 +80,7 @@ h3{
     border: 7px solid white;
     border-radius: 10px;
     box-shadow: 5px 5px black;
-    min-width: 90vw;
+    min-width: 100vw;
     min-height: 300px;
     margin: 30px;
     margin-top: auto;
@@ -119,7 +119,7 @@ p{
 }
 
 ul li{
-    margin-left: 20px;
+    margin-left: 10px;
     line-height: 30px;
 }
 
