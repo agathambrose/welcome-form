@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,51,1) 35%);
+    color: black;
+    font-family: 'Castoro', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/*Start Heading*/
+.form-heading{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: 600;
+    min-width: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    letter-spacing: 10px;
+    justify-content: center;
+    text-transform: uppercase;
+    padding-top: 30px;
+}
+
+h1 span{
+    color: black;
+}
+
+h2{
+    display: block;
+    justify-content: center;
+    color: white;
+    max-width: ;
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+h3{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+}
+/*End Heading*/
+
+/*Start Form*/
+.form-body{
+    max-width: 1000px;
+    margin: 10px ;
+    padding: 10px;
+}
+
+.form-control{
+    background-color: gray;
+    border: 7px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+    min-width: 45rem;
+    min-height: 300px;
+    margin: 30px;
+    margin-top: auto;
+    padding: 10px;
+    overflow: hidden ease;
+}
+
+.form-control.success input{
+    border-color: rgb(7, 230, 7);
+}
+
+.form-control.error input{
+    border-color: rgb(250, 6, 6);
+}
+
+.form-control.success select{
+    border-color: rgb(7, 230, 7);
+}
+
+.form-control.error select{
+    border-color:  rgb(250, 6, 6);
+}
+
+ul{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgb(2,0,36);
+    margin: 10px;
+    line-height: 40px;
+}
+
+p{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+ul li{
+    margin-left: 20px;
+    line-height: 30px;
+}
+
+li{
+    font-size: 1rem;
+    font-weight: 200;
+    font-family: inherit;
+}
+
+input[type=text]{
+    height: 3rem;
+    width: 98%;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+input[type=text]:hover{
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+input[type=radio]{
+    height: 1rem;
+    width: 5%;
+}
+
+input[type=radio]:hover{
+    color: white;
+    background-color: black;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+select{
+    height: 50px; 
+    width: 98%; 
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 1rem; 
+    font-family: inherit;
+}
+
+select:hover{
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+input[type=checkbox]{
+    height: 1rem;
+    width: 5%;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+input[type=checkbox]:hover{
+    color: white;
+    background-color: black;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+small{
+    font-size: 1rem;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+input[type=email]{
+    height: 3rem;
+    width: 98%;
+    font-size: 1rem;
+    font-family: inherit;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+input[type=email]:hover{
+    color: white;
+    background-color: black;
+    transition: .3s ease;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.form-control i{
+    position: relative;
+    visibility: hidden;
+    bottom: 30px;
+    left: 38rem;
+    size: 10px;
+}
+
+.form-control.success i.fa-check-circle{
+    visibility: visible;
+    color: rgb(7, 230, 7);
+}
+
+.form-control.error i.fa-exclamation-circle{
+    visibility: visible;
+    color:  rgb(250, 6, 6);
+}
+
+.form-control.error h6{
+    visibility: visible;
+    color: rgb(250, 6, 6);
+}
+
+h6{
+    position: absolute;
+    margin-left: 20px;
+    font-size: .8rem;
+    visibility: hidden;
+}
+
+/*End Form*/
+
+/*Start Button*/
+button{
+    background-color: white;
+    border: 2px solid rgb(2,0,36);
+    color: black;
+    display: block;
+    width: 100%;
+    height: 3rem;
+    margin-top: 0;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    font-family: inherit;
+    border-radius: 20px;
+    outline: none;
+}
+
+button:hover{
+    color: white;
+    border: 2px solid black;
+    font-size: 1.5rem;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,51,1) 35%);
+    transition: .3s ease;
+}
+/*End Button*/
+

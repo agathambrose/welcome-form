@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Start Heading-->
+    <section class="form-heading">
+        <div class="section-title">
+            <h1>Wel<span>c</span>ome</h1>
+            <h2>Thank you for showing interest in the program!</h2>
+            <h3>Kindly fill the form below accurately to register.</h3>
+        </div>
+    </section>
+    <!--End Heading-->
+    
+    <!--Start Form-->
+
+    <section class="form-body">
+        <div class="form-control success" class="form-control error">
+            <form class="form" id="form" action="#">
+                    <ul style="list-style-type: none;" id="name">
+                        <br>
+                        <p>Name</p>
+                        <li id="name"><input id="username" type="text" placeholder="Full Name" required></li>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h6>*required</h6>
+                        <br>
+                        </li>
+                    </ul>
+
+                    <ul style="list-style-type: none;" id="sex" class="radio-group" required>
+                        <br>
+                        <p>Sex</p>
+                        <li>
+                            <label for="male">
+                                <input id="male" type="radio" name="Male">Male
+                            </label>
+                        </li>
+                        <li>
+                            <label for="female">
+                                <input id="female" type="radio" name="Female">Female
+                            </label>
+                        </li>
+                        <li>
+                            <label for="non-binary">
+                                <input id="non-binary" type="radio" name="Non-binary">Non-binary
+                            </label>
+                        </li>
+                        <li>
+                            <label for="prefer-not-to-say">
+                                <input id="prefer-not-to-say" type="radio" name="Prefer not to say">Prefer not to say
+                            </label>
+                        </li>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <h6>*required</h6>
+                            <br>
+                    </ul>
+
+                    <ul style="list-style-type: none;" id="qualif" required>
+                        <br>
+                        <p class="qualif">Highest Qualification</p>
+                        <li>
+                        <select style="" name="dropdown" id="dropDwn" required>
+                            <option class="dropDwn" value="1">High School</option>
+                            <option class="dropDwn" value="2">HND</option>
+                            <option class="dropDwn" value="3">BSC</option>
+                            <option class="dropDwn" value="4">MSC</option>
+                        </select>
+                        </li>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h6 class="select">*required</small>
+                        <br>
+                    </ul>
+
+                    <ul style="list-style-type: none;" id="interests" class="checkbox-group" required>
+                        <br>
+                        <p>Interests</p>
+                        <small>You can click as many as possible</small>
+                        <li>
+                            <label for="sports">
+                                <input id="sports" type="checkbox" name="interests">Sports
+                            </label>
+        
+                            <label for="music">
+                                <input id="music" type="checkbox" name="interests">Music
+                            </label>
+                        </li>
+
+                        <li>
+                            <label for="politics">
+                                <input id="politics" type="checkbox" name="interests">Politics
+                            </label>
+
+                            <label for="tech">
+                                <input id="tech" type="checkbox" name="interests">Tech
+                            </label>
+                        </li>
+                            
+                        <li>
+                            <label for="arts">
+                                <input id="arts" type="checkbox" name="interests">Arts
+                            </label>
+                            <label for="design">
+                                <input id="design" type="checkbox" name="interests">Design
+                            </label>
+                        </li>
+                        <li>
+                            <label for="others">
+                                <input id="others" type="checkbox" name="interests">Others
+                            </label>
+                        </li>
+                            <i class="fas fa-check-circle"></i>
+                            <i class="fas fa-exclamation-circle"></i>
+                            <h6>*required</h6>
+                    </ul>
+
+                    <ul style="list-style-type: none;">
+                        <br>
+                        <p class="email">Email</p>
+                        <li>
+                            <input id="email" type="email" placeholder="Email Address" required>
+                        </li>
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <h6>*required</h6>
+                    </ul>
+            </form>
+            <br>
+    <!--End Form-->
+
+    <!--Start Button-->
+            <div class="centered">
+                <button class="btn" type="submit"><strong>Submit</strong></button>
+            </div>
+    <!--End Button-->
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const email = document.getElementById('email');
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    checkInputs();
+})
+
+function checkInputs(){
+    //get the values from the inputs
+    const usernameValue = username.value;
+    const emailValue = email.value.trim();
+
+    if(usernameValue === ''){
+        //show error
+        //show error class
+        setErrorFor(username, 'Name cannot be blank')
+    } else{
+        //add success class
+        setSuccessFor(username)
+    }
+}
+
+function setErrorFor(input, message){
+    const formControl = input.parentElement; //.form-control
+    const h6 = formControl.querySelector('h6');
+
+    //add error message inside h6
+    h6.innerText = message;
+
+    //add error class
+    formControl.className = 'form-control error'
+}
+
+function myFunction(form){
+    
+}
