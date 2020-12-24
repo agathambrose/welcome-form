@@ -1,6 +1,10 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
+const sex = document.getElementById('sex');
+const qualif = document.getElementById('qualif');
+const interests = document.getElementById('interests');
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -24,14 +28,14 @@ function checkInputs(){
 }
 
 function setErrorFor(input, message){
-    const formControl = input.parentElement; //.form-control
-    const h6 = formControl.querySelector('h6');
+    const formBody = input.parentElement; //.form-body
+    const h6 = formBody.querySelector('h6');
 
     //add error message inside h6
     h6.innerText = message;
 
     //add error class
-    formControl.className = 'form-control error'
+    formBody.className = 'form-control error'
 }
 
 function myFunction(form){
