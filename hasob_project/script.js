@@ -1,9 +1,6 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
-const sex = document.getElementById('sex');
-const qualif = document.getElementById('qualif');
-const interests = document.getElementById('interests');
 
 
 form.addEventListener('submit', (e) => {
