@@ -11,9 +11,9 @@ body{
     color: black;
     font-family: 'Castoro', sans-serif;
     min-height: 100vh;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     margin: 0;
 }
@@ -24,9 +24,10 @@ html{
 
 /*Start Heading*/
 .form-heading{
-    display: block;
+    display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 h1{
@@ -69,10 +70,11 @@ h3{
 
 /*Start Form*/
 .form-body{
-    min-width: 100vw;
+    max-width: 100vw;
     max-height: 100vh;
     margin: 10px ;
     padding: 20px;
+    position: relative;
 }
 
 .form-control{
@@ -80,7 +82,7 @@ h3{
     border: 7px solid white;
     border-radius: 10px;
     box-shadow: 5px 5px black;
-    min-width: 100vw;
+    min-width: 80vw;
     min-height: 300px;
     margin: 30px;
     margin-top: auto;
