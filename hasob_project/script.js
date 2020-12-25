@@ -1,40 +1,54 @@
-const form = document.getElementById('form');
-const username = document.getElementById('username');
-const email = document.getElementById('email');
+const form = document.querySelector('form#form');
+const errors_el = document.querySelector('form#form .errors');
 
+form.addEventListener('submit', validateForm);
 
-form.addEventListener('submit', (e) => {
+function validateForm (e){
     e.preventDefault();
 
-    checkInputs();
-})
-
-function checkInputs(){
-    //get the values from the inputs
-    const usernameValue = username.value;
-    const emailValue = email.value.trim();
-
-    if(usernameValue === ''){
-        //show error
-        //show error class
-        setErrorFor(username, 'Name cannot be blank')
-    } else{
-        //add success class
-        setSuccessFor(username)
-    }
+    const username = document.querySelector('#form #username');
+    const email = document.querySelector('#form #email');
 }
 
-function setErrorFor(input, message){
-    const formBody = input.parentElement; //.form-body
-    const h6 = formBody.querySelector('h6');
+let errors = [];
 
-    //add error message inside h6
-    h6.innerText = message;
+const form_email = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-    //add error class
-    formBody.className = 'form-control error'
+if (username.value === ''){
+    errors.push({text: "username", el: username});
 }
 
-function myFunction(form){
-    
+if(email.value === ''){
+    errors.push({text: "email", el: email});
+} else if(!form_email.test(email.value)){
+    errors.push({text: "email", el: email});
+}
+
+if (errors.length > 0){
+    handle_errors(errors);
+    return false;
+}
+
+alert('REGISTRATION SUCCESSFUL!');
+return true;
+
+function handle_errors(errs){
+    let str = "You have errors with the following fields; ";
+
+    errs.map((er) => {
+        er.el.classList.add('error');
+        str += er.text + ", ";
+    });
+
+    errs[0].el.focus();
+
+    let error_el = document.createElement('div');
+    error_el.classList.add('error');
+    error_el.innerText = str;
+
+    error_el.addEventListener('click', function () {
+        errors_el.removeChild(error_el);
+    });
+
+    errors_el.appendChild(error_el);
 }
