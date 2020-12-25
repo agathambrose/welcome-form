@@ -1,4 +1,4 @@
-const form = document.querySelector('form#form');
+/* const form = document.querySelector('form#form');
 const errors_el = document.querySelector('form#form .errors');
 
 form.addEventListener('submit', validateForm);
@@ -52,4 +52,15 @@ function handle_errors(errs){
 
     errors_el.appendChild(error_el);
 }
+*/
 
+
+function Validate() {
+    var dropDwn = document.getElementById("dropDwn");
+    if (dropDwn.value == "") {
+        //If the "Please Select" option is selected display error.
+        alert("Please select an option!");
+        return false;
+    }
+    return true;
+}

@@ -149,7 +149,7 @@ input[type=text]:hover{
 input[type=radio]{
     height: 1rem;
     width: 6%;
-    margin-left: 20px;
+    margin-left: -16px;
 }
 
 input[type=radio]:hover{
