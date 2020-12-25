@@ -24,7 +24,7 @@
             <form class="form" id="form" action="#">
                     <ul style="list-style-type: none;" id="name">
                         <p>Name</p>
-                        <li><input id="username" type="text" placeholder="Full Name" required='required'></li>
+                        <li><input id="username" type="text" placeholder="Full Name" required></li>
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
                         <h6>*required</h6>
@@ -32,28 +32,31 @@
                         </li>
                     </ul>
 
-                    <ul style="list-style-type: none;" id="sex" class="radio-group" required='required'>
+                    <ul style="list-style-type: none;" class="radio-group">
                         <p>Sex</p>
-                        <li>
-                            <label for="male">
-                                <input id="male" type="radio" name="gender">Male
+                        <label id="radio">
+                            <li>
+                                <label for="male">
+                                    <input id="male" type="radio" name="gender" value="male">Male
+                                </label>
+                            </li>
+                            <li>
+                                <label for="female">
+                                    <input id="female" type="radio" name="gender" value="female">Female
+                                </label>
+                            </li>
+                            <li>
+                                <label for="non-binary">
+                                    <input id="non-binary" type="radio" name="gender" value="non-binary">Non-binary
+                                </label>
+                            </li>
+                            <li>
+                                <label for="prefer-not-to-say">
+                                    <input id="prefer-not-to-say" type="radio" name="gender" value="prefer-not-to-say" required>Prefer not to say
+                                </label>
                             </label>
                         </li>
-                        <li>
-                            <label for="female">
-                                <input id="female" type="radio" name="gender">Female
-                            </label>
-                        </li>
-                        <li>
-                            <label for="non-binary">
-                                <input id="non-binary" type="radio" name="gender">Non-binary
-                            </label>
-                        </li>
-                        <li>
-                            <label for="prefer-not-to-say">
-                                <input id="prefer-not-to-say" type="radio" name="gender">Prefer not to say
-                            </label>
-                        </li>
+                       
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
                             <h6>*required</h6>
@@ -63,8 +66,8 @@
                     <ul style="list-style-type: none;" id="qualif">
                         <p class="qualif">Highest Qualification</p>
                         <li>
-                        <select name="dropdown" id="dropDwn" required='required'>
-                            <option class="dropDwn" value="1">High School</option>
+                        <select name="dropdown" id="dropDwn" required>
+                            <option class="dropDwn" value="1" required>High School</option>
                             <option class="dropDwn" value="2">HND</option>
                             <option class="dropDwn" value="3">BSC</option>
                             <option class="dropDwn" value="4">MSC</option>
@@ -76,12 +79,12 @@
                         <br>
                     </ul>
 
-                    <ul style="list-style-type: none;" id="interests" class="checkbox-group" required='required'>
+                    <ul style="list-style-type: none;" id="interests" class="checkbox-group">
                         <p>Interests</p>
                         <small style="margin-left: 8px;" >Tick as many as possible</small>
                         <li>
                             <label for="music">
-                                <input id="music" type="checkbox" name="interests">Music
+                                <input id="music" type="checkbox" name="interests" required>Music
                             </label>
                         </li>
 
@@ -109,7 +112,7 @@
                     <ul style="list-style-type: none;">
                         <p class="email">Email</p>
                         <li>
-                            <input id="email" type="email" placeholder="Email Address" required='required'>
+                            <input id="email" type="email" placeholder="Email Address" required>
                         </li>
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
@@ -117,7 +120,7 @@
                     </ul>
                     <br>
                 <!--Start Button-->
-                    <button class="btn" type="submit" onclick="submit"><strong>Submit</strong></button>
+                    <button class="submit" type="submit"><strong>Submit</strong></button>
                 <!--End Button-->
                 <div class="errors"></div>
             </form>

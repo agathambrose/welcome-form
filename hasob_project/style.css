@@ -115,9 +115,9 @@ p{
 }
 
 label{
-    font-size: 1.5rem;
-    font-weight: 300;
-    margin-left: 10px;
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin-left: 16px;
 }
 
 ul li{
@@ -126,7 +126,7 @@ ul li{
 }
 
 li{
-    font-size: 1rem;
+    font-size: .8rem;
     font-weight: 200;
     font-family: inherit;
 }
@@ -134,14 +134,14 @@ li{
 input[type=text]{
     height: 3rem;
     width: 98%;
-    font-size: 1rem;
+    font-size: .8rem;
     font-family: inherit;
     margin-top: 10px;
     padding: 10px;
 }
 
 input[type=text]:hover{
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: .3s ease;
     cursor: pointer;
 }
@@ -163,13 +163,13 @@ select{
     margin-top: 20px;
     padding: 5px;
     color: gray;
-    font-size: 1rem; 
+    font-size: .8rem; 
     font-family: inherit;
 }
 
 select:hover{
     color: black;
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: .3s ease;
     cursor: pointer;
 }
@@ -212,12 +212,12 @@ input[type=email]:hover{
 }
 
 .form-control.success i.fa-check-circle{
-    visibility: visible;
+    visibility: hidden;
     color: rgb(7, 230, 7);
 }
 
 .form-body.error i.fa-exclamation-circle{
-    visibility: visible;
+    visibility: hidden;
     color:  rgb(250, 6, 6);
 }
 
@@ -278,22 +278,25 @@ h2{
     font-size: 2rem;
 }
 p{
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 li{
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+label{
+    margin-left: 14px;
 }
 input[type=text]{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 input[type=text]:hover{
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     transition: .3s ease;
     cursor: pointer;
 }
 input[type=radio]{
-    height: 1.3rem;
-    width: 2%;
+    height: 1.5rem;
+    width: 4%;
     margin-left: -14px;
 }
 input[type=radio]:hover{
@@ -301,19 +304,19 @@ input[type=radio]:hover{
     cursor: pointer;
 }
 select{
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: gray;
 }
 select:hover{
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     color: black;
     transition: .3s ease;
     cursor: pointer;
 }
 input[type=checkbox]{
-    height: 1.3rem;
+    height: 1rem;
     width: 2%;
-    margin-left: -14px;
+    margin-left: -21px;
 }
 input[type=checkbox]:hover{
     transition: .3s ease;
@@ -360,6 +363,9 @@ button:hover{
     }
     li{
         font-size: 1.3rem;
+    }
+    label{
+        margin-left: 16px;
     }
     input[type=text]{
         font-size: 1.3rem;
