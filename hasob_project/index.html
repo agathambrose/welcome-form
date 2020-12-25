@@ -24,20 +24,20 @@
             <form class="form" id="form" action="#">
                     <ul style="list-style-type: none;" id="name">
                         <p>Name</p>
-                        <li><input id="username" type="text" placeholder="Full Name" required></li>
+                        <li><input id="username" class="username" type="text" placeholder="Full Name" required></li>
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
-                        <h6>*required</h6>
+                        <h6 id="required">*required</h6>
                         <br>
                         </li>
                     </ul>
 
                     <ul style="list-style-type: none;" class="radio-group">
                         <p>Gender</p>
-                        <label id="radio">
+                        <li id="radios">
                             <li>
                                 <label for="male">
-                                    <input id="male" type="radio" name="gender" value="male">Male
+                                    <input id="male" type="radio" name="gender" value="male" required>Male
                                 </label>
                             </li>
                             <li>
@@ -52,14 +52,14 @@
                             </li>
                             <li>
                                 <label for="prefer-not-to-say">
-                                    <input id="prefer-not-to-say" type="radio" name="gender" value="prefer-not-to-say" required>Prefer not to say
+                                    <input id="prefer-not-to-say" type="radio" name="gender" value="prefer-not-to-say">Prefer not to say
                                 </label>
                             </label>
                         </li>
                        
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
-                            <h6>*required</h6>
+                            <h6 id="required">*required</h6>
                             <br>
                     </ul>
 
@@ -75,38 +75,41 @@
                         </li>
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
-                        <h6 class="select">*required</small>
+                        <h6 id="required">*required</h6>
                         <br>
                     </ul>
 
                     <ul style="list-style-type: none;" id="interests" class="checkbox-group">
                         <p>Interests</p>
                         <small style="margin-left: 8px;" >Tick as many as possible</small>
-                        <li>
-                            <label for="music">
-                                <input id="music" type="checkbox" name="interests" required>Music
-                            </label>
+                        <li id="checkboxes">
+                            <li>
+                                <label for="music">
+                                    <input id="music" type="checkbox" name="interests" required>Music
+                                </label>
+                            </li>
+    
+                            <li>
+                                <label for="tech">
+                                    <input id="tech" type="checkbox" name="interests">Tech
+                                </label>
+                            </li>
+                                
+                            <li>
+                                <label for="design">
+                                    <input id="design" type="checkbox" name="interests">Design
+                                </label>
+                            </li>
+                            <li>
+                                <label for="others">
+                                    <input id="others" type="checkbox" name="interests">Others
+                                </label>
+                            </li>
                         </li>
-
-                        <li>
-                            <label for="tech">
-                                <input id="tech" type="checkbox" name="interests">Tech
-                            </label>
-                        </li>
-                            
-                        <li>
-                            <label for="design">
-                                <input id="design" type="checkbox" name="interests">Design
-                            </label>
-                        </li>
-                        <li>
-                            <label for="others">
-                                <input id="others" type="checkbox" name="interests">Others
-                            </label>
-                        </li>
+                        
                             <i class="fas fa-check-circle"></i>
                             <i class="fas fa-exclamation-circle"></i>
-                            <h6>*required</h6>
+                            <h6 id="required">*required</h6>
                     </ul>
 
                     <ul style="list-style-type: none;">
@@ -116,11 +119,11 @@
                         </li>
                         <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
-                        <h6>*required</h6>
+                        <h6 id="required">*required</h6>
                     </ul>
                     <br>
                 <!--Start Button-->
-                    <button class="submit" type="submit"><strong>Submit</strong></button>
+                    <button class="submitBtn" id="submitBtn" type="submit"><strong>Submit</strong></button>
                 <!--End Button-->
                 <div class="errors"></div>
             </form>

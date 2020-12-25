@@ -53,14 +53,63 @@ function handle_errors(errs){
     errors_el.appendChild(error_el);
 }
 */
+/*Start Event Listeners*/
+const form = document.querySelector("#form");
+const username = document.querySelector("#username");
+const radios = document.querySelector("#radios");
+const dropDwn = document.querySelector("#dropDwn");
+const checkboxes = document.querySelector("#checkboxes");
+const email = document.querySelector("#email");
 
+if (form){
+    form.addEventListener("submit", function(e) {
+        submitForm(e, this);
+    })
+}
 
+let form = document.getElementsById("form")[0];
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  alert("Form Submitted!");
+});
+/*End Event Listeners*/
+
+/*Start Dropdown Validation*/
 function Validate() {
     var dropDwn = document.getElementById("dropDwn");
+    var required = document.getElementById("required")
     if (dropDwn.value == "") {
         //If the "Please Select" option is selected display error.
-        alert("Please select an option!");
+        alert(h6);
         return false;
     }
     return true;
 }
+/*End Dropdown Validation*/
+
+/*Start JSON*/
+    async function submitForm(e, form){
+        //prevent page reload
+        e.preventDefault();
+        //submit form
+
+        //user interaction
+        const submitBtn = document.getElementById("submitBtn");
+        submitBtn.disabled = true;
+        setTimeout(() => submitBtn.disabled = false, 2000);
+        //JSON body
+        const jsonFormData = buildJsonFormData(form);
+        //JSON headers
+        const headers = buildHeaders();
+        //request and response
+        const response = await fetchService.performPostHttpRequest('https://jsonplaceholder.typicode.com/posts', headers, jsonFormData); //makes use of JSON placeholder
+        console.log(response); //informs user of result
+
+        if(response)
+            window.location = `/success.html?username=${response.username}&radio=${response.radio}&dropDwn=${response.dropDwn}&checkboxes=${response.checkboxes}&email=${response.email}&id=${response.id}`;
+        else
+            alert(`An error occurred`)
+    }
+/*End JSON*/
+
+
