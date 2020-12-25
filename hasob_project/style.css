@@ -63,7 +63,7 @@ h2{
 
 /*Start Form*/
 .form-body{
-    min-width: 85vw;
+    min-width: 80vw;
     max-height: 80vh;
     padding: 2rem;
     position: relative;
@@ -74,7 +74,7 @@ h2{
     border: 2px;
     border-radius: 10px;
     box-shadow: 3px 8px 12px gray;
-    min-width: 85vw;
+    min-width: 80vw;
     min-height: 80vh;
     margin-top: auto;
     padding: 10px;
@@ -104,7 +104,7 @@ ul{
     box-shadow: 0 4px 8px 0 rgba(99, 96, 96, 0.2), 0 6px 20px 0 rgba(36, 34, 34, 0.19);
     margin: 15px;
     padding: 30px;
-    min-width: 85vw;
+    min-width: 82vw;
     line-height: 40px;
 }
 
