@@ -148,11 +148,8 @@ input[type=text]:hover{
 
 input[type=radio]{
     height: 1rem;
-    width: 5%;
-}
-
-li #gender{
-    margin-left: -30px;
+    width: 6%;
+    margin-left: -16px;
 }
 
 input[type=radio]:hover{
@@ -179,9 +176,8 @@ select:hover{
 
 input[type=checkbox]{
     height: 1rem;
-    width: 4%;
-    font-size: 1rem;
-    padding: 10px;
+    width: 6%;
+    margin-left: -16px;
 }
 
 input[type=checkbox]:hover{
@@ -272,7 +268,7 @@ button:hover{
 }
 /*End Button*/
 
-/*Start Media Query For Desktop*/
+/*Start Media Query For Desktops*/
 @media only screen and (min-width: 768px){
 
 h1{
@@ -295,6 +291,15 @@ input[type=text]:hover{
     transition: .3s ease;
     cursor: pointer;
 }
+input[type=radio]{
+    height: 1.3rem;
+    width: 2%;
+    margin-left: -14px;
+}
+input[type=radio]:hover{
+    transition: .3s ease;
+    cursor: pointer;
+}
 select{
     font-size: 1.5rem;
     color: gray;
@@ -302,6 +307,15 @@ select{
 select:hover{
     font-size: 1.7rem;
     color: black;
+    transition: .3s ease;
+    cursor: pointer;
+}
+input[type=checkbox]{
+    height: 1.3rem;
+    width: 2%;
+    margin-left: -14px;
+}
+input[type=checkbox]:hover{
     transition: .3s ease;
     cursor: pointer;
 }
@@ -330,9 +344,9 @@ button:hover{
 }
 
 }
-/*End Media Query For Desktop*/
+/*End Media Query For Desktops*/
 
-/*Start Media Query For Tablet*/
+/*Start Media Query For Tablets*/
 @media only screen and (min-width: 600px){
 
     h1{
@@ -365,6 +379,15 @@ button:hover{
         transition: .3s ease;
         cursor: pointer;
     }
+    input[type=radio]{
+        height: 1.1rem;
+        width: 2%;
+        margin-left: -17px;
+    }
+    input[type=radio]:hover{
+        transition: .3s ease;
+        cursor: pointer;
+    }
     input[type=email]{
         font-size: 1.3rem;
     }
@@ -390,3 +413,4 @@ button:hover{
     }
 
 }
+/*End Media Query For Tablets*/
