@@ -26,15 +26,17 @@
 /*End JSON*/
 
 
-$("#submitBtn").click(function (e) {
+$(document).ready(()=>{
+    $("#form").on('submit',  ()=>{
     ValidateForm();
     return false;
 });
+})
 
 
 function EmailValidate(){
     var numericExpression = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    var elem = $("email").val();
+    var elem = $("#email").val();
     if (elem.match(numericExpression))
         return true;
     else
@@ -49,33 +51,51 @@ function ValidateForm(){
     let errorEmail = "*Email required"
 
     //Radios
-    if ((!($("#radios").prop('checked')))) {
-        $("#errorRadios").html(errorMessage);
+
+    if ($('input[name= "gender"]:checked').length == 0) {
+        $("#errorRadios").html(errorRadios);
         errorCounter++;
+
+    }
+    else {
+        $("#errorRadios").html("");
     }
     //End
 
     //Dropdown
-    if ($('#dropDwn').val() === '') {
-        $("#errordropDwn").html(errorMessage);
+    if ($('#dropDwn').val()=== "") {
+        
+        $("#errordropDwn").html(errordropDwn);
         errorCounter++;
+        
+    }
+    else {
+        $("#errordropDwn").html('');
     }
     //End
 
     //Checkboxes
-    if (!($('#checkboxes').prop('checked')))
-    {$("#errorCheckbox").html(errorMessage);
+
+    if ($('input[type = checkbox]:checked').length == 0)
+    {$("#errorCheckbox").html(errorCheckbox);
         errorCounter++;
     }
+    else{
+        $("#errorCheckbox").html("");
+    }
+
     //End
 
     //Email
     if ($("#email").val() == '') {
-        $("#errorEmail").html(errorMessage);
+        $("#errorEmail").html(errorEmail);
         errorCounter ++;
     }else if (!(EmailValidate())) {
             errorMessage += "*Invalid email address<br/>";
             errorCounter ++;
+    }
+    else {
+        $("#errorEmail").html("")
     }
     //End  
    
