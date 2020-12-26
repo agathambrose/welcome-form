@@ -129,8 +129,8 @@ input[type=text]:hover{
 }
 
 input[type=radio]{
-    height: 1rem;
-    width: 3%;
+    height: .8rem;
+    width: 2%;
 }
 
 input[type=radio]:hover{
@@ -158,8 +158,8 @@ select:hover{
 }
 
 input[type=checkbox]{
-    height: 1rem;
-    width: 3%;
+    height: .8rem;
+    width: 2%;
 }
 
 input[type=checkbox]:hover{
@@ -280,8 +280,8 @@ button:hover{
         cursor: pointer;
     }
     input[type=radio]{
-        height: 2rem;
-        width: 5%;
+        height: 1.5rem;
+        width: 2%;
     }
     input[type=radio]:hover{
         transition: .3s ease;
@@ -300,7 +300,7 @@ button:hover{
     
     input[type=checkbox]{
         height: 2rem;
-        width: 5%;
+        width: 2%;
     }
     input[type=checkbox]:hover{
         transition: .3s ease;
@@ -365,8 +365,8 @@ button:hover{
         cursor: pointer;
     }
     input[type=radio]{
-        height: 1.5rem;
-        width: 3%;
+        height: 1rem;
+        width: 2%;
     }
     input[type=radio]:hover{
         transition: .3s ease;
@@ -384,8 +384,8 @@ button:hover{
     }
     
     input[type=checkbox]{
-        height: 1.5rem;
-        width: 3%;
+        height: 1rem;
+        width: 2%;
     }
     input[type=checkbox]:hover{
         transition: .3s ease;
