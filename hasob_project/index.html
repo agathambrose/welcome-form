@@ -23,118 +23,124 @@
         <div class="form-control success">
             <form class="form" id="form" action="#">
                     <ul style="list-style-type: none;" id="name">
-                        <p>Name</p>
-                        <li><input id="username" class="username" type="text" placeholder="Full Name" required></li>
-                        <!--<i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h6 id="required">*required</h6>--> 
-                        <br>
-                        </li>
-                    </ul>
-
-                    <ul style="list-style-type: none;" class="radio-group">
-                        <p>Gender</p>
-                        <li id="radios">
-                            <li>
-                                <label for="male">
-                                    <input id="male" type="radio" name="gender" value="male" required>Male
-                                </label>
-                            </li>
-                            <li>
-                                <label for="female">
-                                    <input id="female" type="radio" name="gender" value="female">Female
-                                </label>
-                            </li>
-                            <li>
-                                <label for="non-binary">
-                                    <input id="non-binary" type="radio" name="gender" value="non-binary">Non-binary
-                                </label>
-                            </li>
-                            <li>
-                                <label for="prefer-not-to-say">
-                                    <input id="prefer-not-to-say" type="radio" name="gender" value="prefer-not-to-say">Prefer not to say
-                                </label>
-                            </label>
-                        </li>
-                        <!--<i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h6 id="required">*required</h6>--> 
-                        <br>
-                    </ul>
-
-                    <ul style="list-style-type: none;" id="qualif">
-                        <p class="qualif">Highest Qualification</p>
                         <li>
-                        <select name="dropdown" id="dropDwn" required>
-                            <option class="dropDwn" value="1" required>High School</option>
-                            <option class="dropDwn" value="2">HND</option>
-                            <option class="dropDwn" value="3">BSC</option>
-                            <option class="dropDwn" value="4">MSC</option>
-                        </select>
+                            <div class="form-group">
+                                <p>Name</p>
+                                <div class="form-check">
+                                    <input id="username" class="username" type="text" placeholder="Full Name" required>
+                                </div>
+                                <div id="errorName">*Kindly input full name</div>
+                            </div>
                         </li>
-                        <!--<i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h6 id="required">*required</h6>--> 
+
                         <br>
-                    </ul>
 
-                    <ul style="list-style-type: none;" id="interests" class="checkbox-group">
-                        <p>Interests</p>
-                        <small style="margin-left: 8px;" >Tick as many as possible</small>
-                        <li id="checkboxes">
-                            <li>
-                                <label for="music">
-                                    <input id="music" type="checkbox" name="interests" required>Music
-                                </label>
-                            </li>
-    
-                            <li>
-                                <label for="tech">
-                                    <input id="tech" type="checkbox" name="interests">Tech
-                                </label>
-                            </li>
-                                
-                            <li>
-                                <label for="design">
-                                    <input id="design" type="checkbox" name="interests">Design
-                                </label>
-                            </li>
-                            <li>
-                                <label for="others">
-                                    <input id="others" type="checkbox" name="interests">Others
-                                </label>
-                            </li>
-                        </li>
-                        <!--<i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h6 id="required">*required</h6>--> 
-                    </ul>
-
-                    <ul style="list-style-type: none;">
-                        <p class="email">Email</p>
                         <li>
-                            <input id="email" type="email" placeholder="Email Address" required>
+                            <div class="form-group">
+                                <p>Gender</p>
+                                <div class="form-check">
+                                    <label for="male">
+                                        <input id="male" type="radio" name="gender" value="male" required>Male
+                                    </label>
+                                <br>
+                                    <label for="female">
+                                        <input id="female" type="radio" name="gender" value="female">Female
+                                    </label>
+                                <br>
+                                    <label for="non-binary">
+                                        <input id="non-binary" type="radio" name="gender" value="non-binary">Non-binary
+                                    </label>
+                                <br>
+                                    <label for="prefer-not-to-say">
+                                        <input id="prefer-not-to-say" type="radio" name="gender" value="prefer-not-to-say">Prefer not to say
+                                    </label>
+                                </div>
+                                    <div id="errorRadios">*Kindly indicate gender</div>
+                            </div>
                         </li>
-                        <!--<i class="fas fa-check-circle"></i>
-                        <i class="fas fa-exclamation-circle"></i>
-                        <h6 id="required">*required</h6>--> 
+
+                        <br>
+
+                        <li>
+                            <div class="form-group">
+                                <p>Highest Qualification</p>
+                                <div class="form-check">
+                                    <select name="dropdown" id="dropDwn" required>
+                                        <option class="dropDwn" value="1" required>High School</option>
+                                        <option class="dropDwn" value="2">HND</option>
+                                        <option class="dropDwn" value="3">BSC</option>
+                                        <option class="dropDwn" value="4">MSC</option>
+                                        </select>
+                                        <div id="errordropDwn">*Please select an option</div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <br>
+
+                        <li>
+                            <div class="form-group">
+                                <p>Interests</p>
+                                <small>
+                                    Tick as many as possible
+                                </small>
+                                <div class="form-check">
+                                    <label for="music">
+                                        <input id="music" type="checkbox" name="interests" required>Music
+                                    </label>
+                                    <br>
+                                    <label for="tech">
+                                        <input id="tech" type="checkbox" name="interests">Tech
+                                    </label>
+                                    <br>
+                                    <label for="design">
+                                        <input id="design" type="checkbox" name="interests">Design
+                                    </label>
+                                    <br>
+                                    <label for="others">
+                                        <input id="others" type="checkbox" name="interests">Others
+                                    </label>
+                                    <div id="errorCheckbox">*Input required</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <br>
+
+                        <li>
+                            <div class="form-group">
+                                <p class="email">Email</p>
+                                <div class="form-check">
+                                    <input id="email" type="email" placeholder="Email Address" required>
+                                    <div id="errorEmail">*Email required</div>
+                                </div>
+                            </div>
+                        </li>
+              
                     </ul>
+
                     <br>
+
                 <!--Start Button-->
                     <button class="submitBtn" id="submitBtn" type="submit"><strong>Submit</strong></button>
                 <!--End Button-->
-                <!--<div class="errors"></div>-->
-                <div id="errorDiv"></div>
+
             </form>
+
             <br>
+
+            <!--copyright statement-->
             <section>
                 <div>
                     <h5 class="small">&copy Agatha Ambrose For Hasob Internship</h5>
                 </div>
             </section>
+            <!--copyright statement-->
+
         </div>
     </section>
   <!--End Form-->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="script.js"></script>
 </body>
