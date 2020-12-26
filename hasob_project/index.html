@@ -42,6 +42,7 @@
                                     <label for="prefer-not-to-say">
                                         <input id="prefer-not-to-say" type="radio" name="gender" value="prefer-not-to-say">Prefer not to say
                                     </label>
+                                    <div id="errorRadios"></div>
                                 </div>
                             </div>
                         </li>
@@ -59,6 +60,7 @@
                                         <option class="dropDwn" value="3">BSC</option>
                                         <option class="dropDwn" value="4">MSC</option>
                                     </select>
+                                    <div id="errordropDwn"></div>
                                 </div>
                             </div>
                         </li>
@@ -77,16 +79,17 @@
                                     </label>
                                     <br>
                                     <label for="tech">
-                                        <input id="tech" type="checkbox" name="interests" required>Tech
+                                        <input id="tech" type="checkbox" name="interests">Tech
                                     </label>
                                     <br>
                                     <label for="design">
-                                        <input id="design" type="checkbox" name="interests" required>Design
+                                        <input id="design" type="checkbox" name="interests">Design
                                     </label>
                                     <br>
                                     <label for="others">
-                                        <input id="others" type="checkbox" name="interests" required>Others
+                                        <input id="others" type="checkbox" name="interests">Others
                                     </label>
+                                    <div id="errorCheckbox"></div>
                                 </div>
                             </div>
                         </li>
@@ -98,6 +101,7 @@
                                 <p class="email">Email</p>
                                 <div class="form-check">
                                     <input id="email" type="email" placeholder="Email Address" required>
+                                    <div id="errorEmail"></div>
                                 </div>
                             </div>
                         </li>

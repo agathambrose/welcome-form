@@ -184,25 +184,21 @@ h5{
 #errorRadios{
     color: red;
     padding-left:25px;
-    /*visibility: hidden;*/
     font-size: small;
 }
 #errordropDwn{
     color: red;
     padding-left:25px;
-    /*visibility: hidden;*/
     font-size: small;
 }
 #errorCheckbox{
     color: red;
     padding-left:25px;
-    /*visibility: hidden;*/
     font-size: small;
 }
 #errorEmail{
     color: red;
     padding-left:25px;
-    /*visibility: hidden;*/
     font-size: small;
 }
 /*End Form*/
@@ -258,7 +254,7 @@ button:hover{
 
     input[type=radio]{
         height: 1.5rem;
-        width: 6%;
+        width: 5%;
     }
     input[type=radio]:hover{
         transition: .3s ease;
@@ -277,7 +273,7 @@ button:hover{
     
     input[type=checkbox]{
         height: 2rem;
-        width: 6%;
+        width: 5%;
     }
     input[type=checkbox]:hover{
         transition: .3s ease;
@@ -336,7 +332,7 @@ button:hover{
     
     input[type=radio]{
         height: 1rem;
-        width: 6%;
+        width: 3%;
     }
     input[type=radio]:hover{
         transition: .3s ease;
@@ -355,7 +351,7 @@ button:hover{
     
     input[type=checkbox]{
         height: 1rem;
-        width: 6%;
+        width: 3%;
     }
     input[type=checkbox]:hover{
         transition: .3s ease;

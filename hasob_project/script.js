@@ -50,28 +50,28 @@ function ValidateForm(){
 
     //Radios
     if ((!($("#radios").prop('checked')))) {
-        $("#errorRadios").css(errorMessage);
+        $("#errorRadios").html(errorMessage);
         errorCounter++;
     }
     //End
 
     //Dropdown
     if ($('#dropDwn').val() === '') {
-        $("#errordropDwn").css(errorMessage);
+        $("#errordropDwn").html(errorMessage);
         errorCounter++;
     }
     //End
 
     //Checkboxes
     if (!($('#checkboxes').prop('checked')))
-    {$("#errorCheckbox").css(errorMessage);
+    {$("#errorCheckbox").html(errorMessage);
         errorCounter++;
     }
     //End
 
     //Email
     if ($("#email").val() == '') {
-        $("#errorEmail").css(errorMessage);
+        $("#errorEmail").html(errorMessage);
         errorCounter ++;
     }else if (!(EmailValidate())) {
             errorMessage += "*Invalid email address<br/>";
