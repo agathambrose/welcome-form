@@ -25,19 +25,11 @@
     }
 /*End JSON*/
 
-const form = document.querySelector('form#form');
-form.addEventListener('submit', ValidateForm);
 
-function ValidateForm (e){
-
-}
-
-$(document).ready(function () {
-    $("#submitBtn").click(function (e) {
-        ValidateForm();
-        return false;
-      });
-  });
+$("#submitBtn").click(function (e) {
+    ValidateForm();
+    return false;
+});
 
 
 function EmailValidate(){
@@ -51,39 +43,35 @@ function EmailValidate(){
 
 function ValidateForm(){
     var errorCounter = 0;
-    var errorMessage = "";
-    //Name
-    if ($("#username").val() == '') {
-        $("#errorEmail").html(errorMessage);
-        errorCounter ++;
-    }
-    //End
+    let errorRadios = "*Kindly indicate gender";
+    let errorCheckbox = "*Please select an option";
+    let errordropDwn = "*Input required";
+    let errorEmail = "*Email required"
 
     //Radios
     if ((!($("#radios").prop('checked')))) {
-        $("#errorRadios").html(errorMessage);
+        $("#errorRadios").css(errorMessage);
         errorCounter++;
     }
     //End
 
     //Dropdown
-    if ($('#dropDwn').val() == 'select') {
-        $("#errordropDwn").html(errorMessage);
+    if ($('#dropDwn').val() === '') {
+        $("#errordropDwn").css(errorMessage);
         errorCounter++;
     }
     //End
 
     //Checkboxes
     if (!($('#checkboxes').prop('checked')))
-    {
-        $("#errorCheckbox").html(errorMessage);
+    {$("#errorCheckbox").css(errorMessage);
         errorCounter++;
     }
     //End
 
     //Email
     if ($("#email").val() == '') {
-        $("#errorEmail").html(errorMessage);
+        $("#errorEmail").css(errorMessage);
         errorCounter ++;
     }else if (!(EmailValidate())) {
             errorMessage += "*Invalid email address<br/>";

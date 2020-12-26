@@ -113,21 +113,6 @@ li{
     
 }
 
-input[type=text]{
-    height: 3rem;
-    width: 98%;
-    font-size: .8rem;
-    font-family: inherit;
-    margin-top: 10px;
-    padding: 10px;
-}
-
-input[type=text]:hover{
-    font-size: 1rem;
-    transition: .3s ease;
-    cursor: pointer;
-}
-
 input[type=radio]{
     height: .8rem;
     width: 6%;
@@ -196,29 +181,28 @@ h5{
     padding: 5px;
 }
 
-#errorName{
-    color: red;
-    padding-left:25px;
-    font-size: small;
-}
 #errorRadios{
     color: red;
     padding-left:25px;
+    /*visibility: hidden;*/
     font-size: small;
 }
 #errordropDwn{
     color: red;
     padding-left:25px;
+    /*visibility: hidden;*/
     font-size: small;
 }
 #errorCheckbox{
     color: red;
     padding-left:25px;
+    /*visibility: hidden;*/
     font-size: small;
 }
 #errorEmail{
     color: red;
     padding-left:25px;
+    /*visibility: hidden;*/
     font-size: small;
 }
 /*End Form*/
@@ -271,14 +255,7 @@ button:hover{
         font-size: 1.8rem;
         font-weight: 100;
     }
-    input[type=text]{
-        font-size: 1.8rem;
-    }
-    input[type=text]:hover{
-        font-size: 2rem;
-        transition: .3s ease;
-        cursor: pointer;
-    }
+
     input[type=radio]{
         height: 1.5rem;
         width: 6%;
@@ -356,14 +333,7 @@ button:hover{
         font-size: 1.2rem;
         font-weight: 100;
     }
-    input[type=text]{
-        font-size: 1.3rem;
-    }
-    input[type=text]:hover{
-        font-size: 1.5rem;
-        transition: .3s ease;
-        cursor: pointer;
-    }
+    
     input[type=radio]{
         height: 1rem;
         width: 6%;
