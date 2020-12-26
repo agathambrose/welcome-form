@@ -21,12 +21,12 @@
     <!--Start Form-->
     <section class="form-body error">
         <div class="form-control success">
-            <form class="form" id="form">
+            <form class="form" id="form" method="post" action="" novalidate>
                     <ul style="list-style-type: none;">
                         <li>
                             <div class="form-group">
                                 <p>Gender</p>
-                                <div class="form-check">
+                                <div class="form-check" onchange="ValidateForm()">
                                     <label for="male">
                                         <input id="male" type="radio" name="gender" value="male" required>Male
                                     </label>
@@ -53,8 +53,8 @@
                             <div class="form-group">
                                 <p>Highest Qualification</p>
                                 <div class="form-check">
-                                    <select name="dropdown" id="dropDwn" required>
-                                        <option disabled selected value="">Select Qualification</option>
+                                    <select name="dropdown" id="dropDwn"  onchange="ValidateForm()">
+                                        <option hidden selected value="">Select Qualification</option>
                                         <option class="dropDwn" value="1">High School</option>
                                         <option class="dropDwn" value="2">HND</option>
                                         <option class="dropDwn" value="3">BSC</option>
@@ -73,21 +73,21 @@
                                 <small>
                                     Tick as many as possible
                                 </small>
-                                <div class="form-check" required>
+                                <div class="form-check" required onchange="ValidateForm()">
                                     <label for="music">
-                                        <input id="music" type="checkbox" name="interests">Music
+                                        <input id="music" type="checkbox" name="interests" onchange="validateCheckbox()">Music
                                     </label>
                                     <br>
                                     <label for="tech">
-                                        <input id="tech" type="checkbox" name="interests">Tech
+                                        <input id="tech" type="checkbox" name="interests" onchange="validateCheckbox()">Tech
                                     </label>
                                     <br>
                                     <label for="design">
-                                        <input id="design" type="checkbox" name="interests">Design
+                                        <input id="design" type="checkbox" name="interests" onchange="validateCheckbox()">Design
                                     </label>
                                     <br>
                                     <label for="others">
-                                        <input id="others" type="checkbox" name="interests">Others
+                                        <input id="others" type="checkbox" name="interests" onchange="validateCheckbox()">Others
                                     </label>
                                     <div id="errorCheckbox"></div>
                                 </div>
@@ -99,8 +99,8 @@
                         <li>
                             <div class="form-group">
                                 <p class="email">Email</p>
-                                <div class="form-check">
-                                    <input id="email" type="email" placeholder="Email Address" required>
+                                <div class="form-check" >
+                                    <input id="email" type="email" placeholder="Email Address" required onchange="ValidateForm()">
                                     <div id="errorEmail"></div>
                                 </div>
                             </div>
