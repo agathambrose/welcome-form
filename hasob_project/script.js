@@ -1,7 +1,8 @@
-/* const form = document.querySelector('form#form');
-const errors_el = document.querySelector('form#form .errors');
+/*
+const form = document.querySelector('form#form');
+form.addEventListener('submit', ValidateForm);
 
-form.addEventListener('submit', validateForm);
+const errors_el = document.querySelector('form#form .errors');
 
 function validateForm (e){
     e.preventDefault();
@@ -52,8 +53,8 @@ function handle_errors(errs){
 
     errors_el.appendChild(error_el);
 }
-*/
 /*Start Event Listeners*/
+/*
 const form = document.querySelector("#form");
 const username = document.querySelector("#username");
 const radios = document.querySelector("#radios");
@@ -75,6 +76,7 @@ form.addEventListener("submit", (e) => {
 /*End Event Listeners*/
 
 /*Start Dropdown Validation*/
+/*
 function Validate() {
     var dropDwn = document.getElementById("dropDwn");
     var required = document.getElementById("required")
@@ -88,6 +90,7 @@ function Validate() {
 /*End Dropdown Validation*/
 
 /*Start JSON*/
+/*
     async function submitForm(e, form){
         //prevent page reload
         e.preventDefault();
@@ -112,4 +115,79 @@ function Validate() {
     }
 /*End JSON*/
 
+const form = document.querySelector('form#form');
+form.addEventListener('submit', ValidateForm);
+
+function ValidateForm (e){
+
+}
+
+$(document).ready(function () {
+    $("#submitBtn").click(function (e) {
+        ValidateForm();
+        return false;
+      });
+  });
+
+
+function EmailValidate(){
+    var numericExpression = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var elem = $("email").val();
+    if (elem.match(numericExpression))
+        return true;
+    else
+        return false;
+}
+
+function ValidateForm(){
+    var errorCounter = 0;
+    var errorMessage = "";
+    //Name
+    if ($("#username").val() == '') {
+        errorMessage += "*Full name required<br/>";
+        errorCounter ++;
+    }
+    //End
+
+    //Radios
+    if ((!($("#radios").prop('checked')))) {
+        errorMessage += "*Kindly indicate gender<br/>";
+        errorCounter++;
+    }
+    //End
+
+    //Dropdown
+    if ($('#dropDwn').val() == 'select') {
+        errorMessage += "*Qualification required<br/>";
+        errorCounter++;
+    }
+    //End
+
+    //Checkboxes
+    if (!($('#checkboxes').prop('checked')))
+    {
+        errorMessage += "*Kindly indicate interests<br/>"
+        errorCounter++;
+    }
+    //End
+
+    //Email
+    if ($("#email").val() == '') {
+        errorMessage += "*Email Required<br/>";
+        errorCounter ++;
+    }else if (!(EmailValidate())) {
+            errorMessage += "*Invalid email address<br/>";
+            errorCounter ++;
+    }
+    //End  
+    
+    $("#errorDiv").html(errorMessage);
+    if (errorCounter == 0) {
+        alert('Registration Successful!');
+        return true;
+    }else {
+        return false;
+    }
+}
+    
 

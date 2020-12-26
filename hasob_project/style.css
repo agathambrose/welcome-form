@@ -214,12 +214,12 @@ input[type=email]:hover{
 }
 
 .form-control.success i.fa-check-circle{
-    visibility: hidden;
+    visibility: visible;
     color: rgb(7, 230, 7);
 }
 
 .form-body.error i.fa-exclamation-circle{
-    visibility: hidden;
+    visibility: visible;
     color:  rgb(250, 6, 6);
 }
 
@@ -242,6 +242,11 @@ h5{
     align-items: center;
     justify-content: center;
     padding: 5px;
+}
+
+#errorDiv {
+    color: red;
+    padding-left:25px;
 }
 /*End Form*/
 
