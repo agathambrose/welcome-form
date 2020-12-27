@@ -21,7 +21,7 @@
     <!--Start Form-->
     <section class="form-body error">
         <div class="form-control success">
-            <form class="form" id="form" method="post" action="" novalidate>
+            <form class="form" id="form" method="post" onsubmit="return onSubmit(this)" action="" novalidate>
                     <ul style="list-style-type: none;">
                         <li>
                             <div class="form-group">
@@ -130,7 +130,18 @@
     </section>
   <!--End Form-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="script.js"></script>
+  <!--Start JSON Prompt-->
+  <div id="prompt">
+    <p>Registration Successful!</p>
+    <pre>
+     <code-block class="prompt-display"></code-block>
+    </pre>
+    <a href="./index.html">Return</a>
+  </div>
+  <!--Start JSON Prompt-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/path/to/formToJson.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

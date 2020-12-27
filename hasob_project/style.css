@@ -201,6 +201,45 @@ h5{
     padding-left:25px;
     font-size: small;
 }
+
+#prompt {
+    display: none;
+    position: relative;
+  }
+  
+  #prompt p {
+    font-size: 1.7rem !important;
+    margin: 50px;
+    color: rgb(2,0,36);;
+  }
+  
+  a {
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    background-color: rgb(2,0,36);
+    color: #fff;
+    position: absolute;
+    left: 42.5%;
+    transform: translateX(-25%);
+    bottom: -17%;
+    margin-bottom: 15px;
+  
+  }
+  
+  a:hover {
+    color: #fff;
+    background-color: rgb(2,0,36);
+  }
+
+.prompt-display{
+    font-family: 'Roboto' sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    min-width: 100vw;
+    color: rgb(2,0,36);
+    text-shadow: 2px 2px gray;
+}
 /*End Form*/
 
 /*Start Button*/
