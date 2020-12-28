@@ -206,7 +206,7 @@ h5{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 1rem !important;
+    font-size: .8rem !important;
     width: 80vw;
 }
 .prompt-display{
@@ -215,8 +215,8 @@ h5{
     justify-content: center;
     margin-bottom: 100px;
     font-family: monospace;
-    padding: 40px;
-    font-size: 1rem;
+    padding: 20px;
+    font-size: .8rem;
     border: 7px gray;
     box-shadow: 0 4px 8px 0 rgba(99, 96, 96, 0.2), 0 6px 20px 0 rgba(36, 34, 34, 0.19);
     border-radius: 7px;
@@ -352,6 +352,18 @@ button:hover{
         padding-bottom: 5rem;
         transition: .3s ease;
     }
+    .prompt-display{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        font-family: monospace;
+        padding: 40px;
+        font-size: 1.5rem;
+        border: 7px gray;
+        box-shadow: 0 4px 8px 0 rgba(99, 96, 96, 0.2), 0 6px 20px 0 rgba(36, 34, 34, 0.19);
+        border-radius: 7px;
+    }
 
 }
 /*End Media Query For Desktops*/
@@ -430,6 +442,17 @@ button:hover{
         padding-bottom: 3rem;
         transition: .3s ease;
     }
-
+    .prompt-display{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+        font-family: monospace;
+        padding: 30px;
+        font-size: 1rem;
+        border: 7px gray;
+        box-shadow: 0 4px 8px 0 rgba(99, 96, 96, 0.2), 0 6px 20px 0 rgba(36, 34, 34, 0.19);
+        border-radius: 7px;
+    }
 }
 /*End Media Query For Tablets*/
