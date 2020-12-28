@@ -73,7 +73,7 @@ function ValidateForm() {
         $("#form").on("submit", ()=>{
             if (errorCounter === 0){
                 $("#form, .form-heading").css("display", "none");
-                $(".prompt *").css("display", "flex")
+                $(".prompt").css("display", "flex")
                
             }
         })
