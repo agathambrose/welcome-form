@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <title>Questionnaire</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!--Start Heading-->
     <section class="form-heading">
@@ -17,105 +19,117 @@
         </div>
     </section>
     <!--End Heading-->
-    
+
     <!--Start Form-->
     <section class="form-body error">
         <div class="form-control success">
             <form class="form" id="form" method="post" onsubmit="return onSubmit(this)" action="" novalidate>
-                    <ul style="list-style-type: none;">
-                        <li>
-                            <div class="form-group">
-                                <p>Gender</p>
-                                <div class="form-check" onchange="ValidateForm()">
-                                    <label for="male">
-                                        <input id="male" type="radio" name="gender" value="male" required>Male
-                                    </label>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <div class="form-group">
+                            <p>Gender</p>
+                            <div class="form-check" onchange="ValidateForm()">
+                                <label for="male">
+                                    <input id="male" type="radio" name="gender" value="male" required>Male
+                                </label>
                                 <br>
-                                    <label for="female">
-                                        <input id="female" type="radio" name="gender" value="female">Female
-                                    </label>
+                                <label for="female">
+                                    <input id="female" type="radio" name="gender" value="female">Female
+                                </label>
                                 <br>
-                                    <label for="non-binary">
-                                        <input id="non-binary" type="radio" name="gender" value="non-binary">Non-binary
-                                    </label>
+                                <label for="non-binary">
+                                    <input id="non-binary" type="radio" name="gender" value="non-binary">Non-binary
+                                </label>
                                 <br>
-                                    <label for="prefer-not-to-say">
-                                        <input id="prefer-not-to-say" type="radio" name="gender" value="prefer-not-to-say">Prefer not to say
-                                    </label>
-                                    <div id="errorRadios"></div>
-                                </div>
+                                <label for="prefer-not-to-say">
+                                    <input id="prefer-not-to-say" type="radio" name="gender"
+                                        value="prefer-not-to-say">Prefer not to say
+                                </label>
+                                <div id="errorRadios"></div>
                             </div>
-                        </li>
-
-                        <br>
-
-                        <li>
-                            <div class="form-group">
-                                <p>Highest Qualification</p>
-                                <div class="form-check">
-                                    <select name="dropdown" id="dropDwn"  onchange="ValidateForm()">
-                                        <option hidden selected value="">Select Qualification</option>
-                                        <option class="dropDwn" value="1">High School</option>
-                                        <option class="dropDwn" value="2">HND</option>
-                                        <option class="dropDwn" value="3">BSC</option>
-                                        <option class="dropDwn" value="4">MSC</option>
-                                    </select>
-                                    <div id="errordropDwn"></div>
-                                </div>
-                            </div>
-                        </li>
-                        
-                        <br>
-
-                        <li>
-                            <div class="form-group">
-                                <p>Interests</p>
-                                <small>
-                                    Tick as many as possible
-                                </small>
-                                <div class="form-check" required onchange="ValidateForm()">
-                                    <label for="music">
-                                        <input id="music" type="checkbox" name="interests" onchange="validateCheckbox()">Music
-                                    </label>
-                                    <br>
-                                    <label for="tech">
-                                        <input id="tech" type="checkbox" name="interests" onchange="validateCheckbox()">Tech
-                                    </label>
-                                    <br>
-                                    <label for="design">
-                                        <input id="design" type="checkbox" name="interests" onchange="validateCheckbox()">Design
-                                    </label>
-                                    <br>
-                                    <label for="others">
-                                        <input id="others" type="checkbox" name="interests" onchange="validateCheckbox()">Others
-                                    </label>
-                                    <div id="errorCheckbox"></div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <br>
-
-                        <li>
-                            <div class="form-group">
-                                <p class="email">Email</p>
-                                <div class="form-check" >
-                                    <input id="email" type="email" placeholder="Email Address" required onchange="ValidateForm()">
-                                    <div id="errorEmail"></div>
-                                </div>
-                            </div>
-                        </li>
-              
-                    </ul>
+                        </div>
+                    </li>
 
                     <br>
 
+                    <li>
+                        <div class="form-group">
+                            <p>Highest Qualification</p>
+                            <div class="form-check">
+                                <select name="qualification" id="dropDwn" onchange="ValidateForm()">
+                                    <option hidden selected value="">Select Qualification</option>
+                                    <option class="dropDwn" value="high school">High School</option>
+                                    <option class="dropDwn" value="HND">HND</option>
+                                    <option class="dropDwn" value="BSc">BSC</option>
+                                    <option class="dropDwn" value="MSc">MSC</option>
+                                </select>
+                                <div id="errordropDwn"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <br>
+
+                    <li>
+                        <div class="form-group">
+                            <p>Interests</p>
+                            <small>
+                                Tick as many as possible
+                            </small>
+                            <div class="form-check" required onchange="ValidateForm()">
+                                <label for="music">
+                                    <input id="music" type="checkbox" name="interests" value="music"
+                                        onchange="validateCheckbox()">Music
+                                </label>
+                                <br>
+                                <label for="tech">
+                                    <input id="tech" type="checkbox" name="interests" value="tech"
+                                        onchange="validateCheckbox()">Tech
+                                </label>
+                                <br>
+                                <label for="design">
+                                    <input id="design" type="checkbox" name="interests" value="design"
+                                        onchange="validateCheckbox()">Design
+                                </label>
+                                <br>
+                                <label for="others">
+                                    <input id="others" type="checkbox" name="interests" value="others"
+                                        onchange="validateCheckbox()">Others
+                                </label>
+                                <div id="errorCheckbox"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <br>
+
+                    <li>
+                        <div class="form-group">
+                            <p class="email">Email</p>
+                            <div class="form-check">
+                                <input id="email" type="email" name="email" placeholder="Email Address" required
+                                    onchange="ValidateForm()">
+                                <div id="errorEmail"></div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <br>
+
                 <!--Start Button-->
-                    <button class="submitBtn" id="submitBtn" type="submit"><strong>Submit</strong></button>
+                <button class="submitBtn" id="submitBtn" type="submit"><strong>Submit</strong></button>
                 <!--End Button-->
 
             </form>
-
+            <div class="prompt .hide-prompt">
+                <p>Registration Successful!</p>
+                <pre>
+     <code-block class="prompt-display"></code-block>
+    </pre>
+                <a href="./index.html">Return</a>
+            </div>
             <br>
 
             <!--copyright statement-->
@@ -128,20 +142,15 @@
 
         </div>
     </section>
-  <!--End Form-->
+    <!--End Form-->
 
-  <!--Start JSON Prompt-->
-  <div id="prompt">
-    <p>Registration Successful!</p>
-    <pre>
-     <code-block class="prompt-display"></code-block>
-    </pre>
-    <a href="./index.html">Return</a>
-  </div>
-  <!--Start JSON Prompt-->
+    <!--Start JSON Prompt-->
+
+    <!--Start JSON Prompt-->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/path/to/formToJson.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

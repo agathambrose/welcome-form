@@ -1,13 +1,13 @@
 
 /*Start JQuery Form Validation*/
-$(document).ready(()=>{
-    $("#form").on('submit',  ()=>{
-    ValidateForm();
-    return false;
+$(document).ready(() => {
+    $("#form").on('submit', () => {
+        ValidateForm();
+        return false;
     });
 })
 
-function EmailValidate(){
+function EmailValidate() {
     var numericExpression = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     var elem = $("#email").val();
     if (elem.match(numericExpression))
@@ -16,7 +16,7 @@ function EmailValidate(){
         return false;
 }
 
-function ValidateForm(){
+function ValidateForm() {
     var errorCounter = 0;
     let errorRadios = "*Kindly indicate gender";
     let errorCheckbox = "*Please select an option";
@@ -24,6 +24,7 @@ function ValidateForm(){
     let errorEmail = "*Email required"
 
     //Radios
+    
     if ($('input[name= "gender"]:checked').length == 0) {
         $("#errorRadios").html(errorRadios);
         errorCounter++;
@@ -35,11 +36,11 @@ function ValidateForm(){
     //End
 
     //Dropdown
-    if ($('#dropDwn').val()=== "") {
-        
+    if ($('#dropDwn').val() === "") {
+
         $("#errordropDwn").html(errordropDwn);
         errorCounter++;
-        
+
     }
     else {
         $("#errordropDwn").html('');
@@ -47,11 +48,11 @@ function ValidateForm(){
     //End
 
     //Checkboxes
-    if ($('input[type = checkbox]:checked').length == 0)
-    {$("#errorCheckbox").html(errorCheckbox);
+    if ($('input[type = checkbox]:checked').length == 0) {
+        $("#errorCheckbox").html(errorCheckbox);
         errorCounter++;
     }
-    else{
+    else {
         $("#errorCheckbox").html("");
     }
     //End
@@ -59,121 +60,73 @@ function ValidateForm(){
     //Email
     if ($("#email").val() == '') {
         $("#errorEmail").html(errorEmail);
-        errorCounter ++;
-    }else if (!(EmailValidate())) {
-            errorMessage += "*Invalid email address<br/>";
-            errorCounter ++;
+        errorCounter++;
+    } else if (!(EmailValidate())) {
+        errorMessage += "*Invalid email address<br/>";
+        errorCounter++;
     }
     else {
         $("#errorEmail").html("")
     }
-    //End  
-   
+     
+    //hide entire form on validation and display JSON
+        $("#form").on("submit", ()=>{
+            if (errorCounter === 0){
+                $("#form, .form-heading").css("display", "none");
+                $(".prompt *").css("display", "flex")
+               
+            }
+        })
     /*
-    if (errorCounter == 0) {
-        alert('Registration Successful!');
-        return true;
-    }else {
-        return false;
-    } */
+ 
 }
 /*End JQuery Form Validation*/
 
 /*Form to JSON*/
-/*
+
 const formIsValid = (element) => {
     return element.name && element.value
-  }
+}
 
-  const formIsChecked = element => {
+const formIsChecked = element => {
     return !['checkbox', 'radio'].includes(element.type) || element.checked
-  }
+}
 
-  const formHasCheckBox = element => element.type === "checkbox";
-  
-  const takeFormToJSON = elements => {
+const formHasCheckBox = element => element.type === "checkbox";
+
+const takeFormToJSON = elements => {
     const reducerFunction = (data, element) => {
-      data[element.name] = element.value;
-      return data
+        data[element.name] = element.value;
+        return data
     }
     const reducerInitialValue = {};
     const formData = [].reduce.call(elements, reducerFunction, reducerInitialValue);
     return formData
-  }
+}
 
-  const formToJSON = elements => [].reduce.call(elements, (data, element) => {
+const formToJSON = elements => [].reduce.call(elements, (data, element) => {
     if (formIsValid(element) && formIsChecked(element)) {
-      if (formHasCheckBox(element)) {
-        data[element.name] = (data[element.name] || []).concat(element.value)
-      }
-      else data[element.name] = element.value
+        if (formHasCheckBox(element)) {
+            data[element.name] = (data[element.name] || []).concat(element.value)
+        }
+        else data[element.name] = element.value
     }
     return data;
-  }, {})
+}, {})
 
-  const onSubmit = document.getElementById('form');
-  
-  const handleFormSubmit = e => {
+const onSubmit = document.getElementById('form');
+
+const handleFormSubmit = e => {
     e.preventDefault()
     e.stopPropagation()
 
     const data = formToJSON(form.elements);
     const dataDisplay = document.querySelectorAll(".prompt-display")[0];
-    dataDisplay.textContent = JSON.stringify(data, form, null, " ").serializeArray;
-  }
-*/
-/*
-const handleFormSubmit = event => {
-    event.preventDefault();
-    const data = {};
-    const dataContainer = document.getElementsByClassName('prompt_display')[0];
-    dataContainer.textContent = JSON.stringify(data, null, "  ");
-};
-
-const form = document.getElementsByClassName('form')[0];
-form.addEventListener('submit', handleFormSubmit);
-
-const formToJSON = elements => [].reduce.call(elements, (data, element) => {
-    data[element.name] = element.value;
-    return data;
-  }, {});
-
-const handleFormSubmit = event => {
-    event.preventDefault();
-    const data = formToJSON(form.elements);
-    const dataContainer = document.getElementsByClassName('prompt_display')[0];
-    dataContainer.textContent = JSON.stringify(data, null, "  ");
-  const form = document.getElementsByClassName('form')[0];
-  form.addEventListener('submit', handleFormSubmit);
-
-  const formToJSON = elements => [].reduce.call(elements, (data, element) => {
-    data[element.name] = element.value;
-    return data;
-  }, {});
-
-const handleFormSubmit = event => {
-    event.preventDefault();
-    const data = formToJSON(form.elements);
-    const dataContainer = document.getElementsByClassName('prompt_display')[0];
-    dataContainer.textContent = JSON.stringify(data, null, "  ");
-};
-
-const form = document.getElementsByClassName('form')[0];
-form.addEventListener('submit', handleFormSubmit);*/
-
-let data = [];
-
-const formData = (ev) => {
-    ev.preventDefault();
-    let allData = {
-        form: document.getElementById('form').value
-    }
-    data.push(allData);
-    document.forms[0].reset();
-
-    console.warn('submit', {data});
-    let div = document.querySelector('#prompt');
-    div.textContent = '\n' + JSON.stringify(data, '\t');
+    dataDisplay.textContent = JSON.stringify(data, null, " ");
 }
 
-document.getElementById('submitBtn').addEventListener('submit', formData)
+
+//create JSON on form submit
+const form = document.getElementById('form');
+form.addEventListener('submit', handleFormSubmit);
+}
